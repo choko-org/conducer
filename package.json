@@ -1,0 +1,32 @@
+{
+  "name": "conducer",
+  "version": "0.0.1",
+  "description": "Minimal tools for creating rules with conditions using simple reducers.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run build:commonjs",
+    "build:commonjs": "babel src --out-dir dist --ignore __tests__/*",
+    "test": "tape -r babel-register src/**/__tests__/**/*.js | tap-diff",
+    "test:watch": "tape-watch -r babel-register src/**/__tests__/**/*.js -p tap-diff",
+    "clean": "rimraf lib"
+  },
+  "keywords": [
+    "rules"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": "choko-org/conducer",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "eslint-config-taller": "^1.0.4",
+    "rimraf": "^2.5.4",
+    "tap-diff": "^0.1.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2",
+    "tape-watch": "^2.2.3"
+  }
+}
