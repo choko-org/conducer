@@ -18,15 +18,14 @@ Some condition must be true.
 #### `notSome([ condition, conditionOne, conditionTwo ])`
 Some condition can't be true.
 
-## Example:
+## Examples:
 
 Simple:
 ```js
 import { every, some } from 'conducer'
 
-import { hasRole, isActiveUser } form './libs/user'
-
-const facts = { user: { status: true, roles: ['moderator', 'admin'] } }
+export const hasRole = role => ({ user }) => user.roles.some(role)
+export const isActiveUser = ({ user: { status } }) => status
 
 const canEditComments = every([
   isActiveUser,
@@ -35,6 +34,8 @@ const canEditComments = every([
     hasRole('moderator'),
   ])
 ])
+
+const facts = { user: { status: true, roles: ['moderator', 'admin'] } }
 
 if (canEditComments(facts)) {
   // Give access to edit comments.
@@ -45,7 +46,7 @@ else {
 ```
 
 Using the `when()` chaining function to avoid `if` conditions:
-## Example:
+
 ```js
 import { every, some, when } from 'conducer'
 
