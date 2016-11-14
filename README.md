@@ -1,6 +1,6 @@
 # Conducer
 Minimal tools for creating rules with conditions using simple reducers.
-Conditions are pure functions, so there's side-effects.
+Conditions are pure functions, so there's no side-effects.
 Facts must have everything needed by the conditions.
 
 [![Build Status](https://travis-ci.org/choko-org/conducer.svg?branch=master)](https://travis-ci.org/choko-org/conducer)
