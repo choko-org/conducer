@@ -1,7 +1,7 @@
 # Conducer
 Minimal tools for creating rules with conditions using simple reducers.
 Conditions are pure functions, so there's side-effects.
-The facts must has everything needed by the conditions.
+Facts must have everything needed by the conditions.
 
 ## Tools:
 They return booleans.
@@ -24,7 +24,7 @@ Simple:
 ```js
 import { every, some } from 'conducer'
 
-import { hasRole } form './libs/user'
+import { hasRole, isActiveUser } form './libs/user'
 
 const facts = { user: { status: true, roles: ['moderator', 'admin'] } }
 
