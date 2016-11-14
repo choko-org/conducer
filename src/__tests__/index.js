@@ -98,11 +98,11 @@ test('Using the when function to execute a reaction', assert => {
 
   when(truthyCondition(facts))
     .do(() => assert.pass('Result is true'))
-    .else(() => assert.pass('Should pass here'))
+    .else(() => assert.pass('Shouldn\'t pass here'))
 
   when(falsyCondition(facts))
     .else(() => assert.pass('Result is false'))
-    .do(() => assert.pass('Should pass here'))
+    .do(() => assert.pass('Shouldn\'t pass here'))
 
   assert.end()
 })
