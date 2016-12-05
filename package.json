@@ -1,6 +1,6 @@
 {
   "name": "conducer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Minimal tools for creating rules with conditions using simple reducers.",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "build:commonjs": "babel src --out-dir dist --ignore __tests__/*",
     "test": "tape -r babel-register src/**/__tests__/**/*.js | tap-diff",
     "test:watch": "tape-watch -r babel-register src/**/__tests__/**/*.js -p tap-diff",
-    "clean": "rimraf lib"
+    "clean": "rimraf lib",
+    "prepublish": "npm run test && npm run clean && npm run build"
   },
   "keywords": [
     "rules"
