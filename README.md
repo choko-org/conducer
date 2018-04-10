@@ -4,6 +4,8 @@ Conditions are pure functions, so there's no side-effects.
 Facts must have everything needed by the conditions.
 
 [![Build Status](https://travis-ci.org/choko-org/conducer.svg?branch=master)](https://travis-ci.org/choko-org/conducer)
+[![sponsored by Taller](https://raw.githubusercontent.com/TallerWebSolutions/tallerwebsolutions.github.io/master/sponsored-by-taller.png
+)](https://taller.net.br/en/)
 
 ## Tools:
 They return a single condition `function` which expects the `facts` as argument in order to return a boolean.
